@@ -21,10 +21,11 @@ RUN set -eux && \
     ./configure && \
     make -j2 && \
     make install && \
-    git clone git@github.com:hoshizora-project/amanogawa.git /opt/amanogawa && \
+    git clone https://github.com/hoshizora-project/hoshizora.git /opt/amanogawa && \
     cd /opt/amanogawa && \
     python setup.py install && \
-    git clone git@github.com:hoshizora-project/hoshizora.git /opt/hoshizora && \
+    cd / && \
+    git clone https://github.com:hoshizora-project/hoshizora.git /opt/hoshizora && \
     cd /opt/hoshizora && \
     python setup.py install
 
