@@ -21,12 +21,15 @@ RUN set -eux && \
     ./configure && \
     make -j2 && \
     make install && \
-    git clone https://github.com/hoshizora-project/hoshizora.git /opt/amanogawa && \
+    ldconfig && \
+    git clone https://github.com/hoshizora-project/amanogawa.git /opt/amanogawa && \
     cd /opt/amanogawa && \
+    make init && \
     python setup.py install && \
-    cd / && \
-    git clone https://github.com:hoshizora-project/hoshizora.git /opt/hoshizora && \
+    git clone https://github.com/hoshizora-project/hoshizora.git /opt/hoshizora && \
     cd /opt/hoshizora && \
+    git submodule init && \
+    git submodule update && \
     python setup.py install
 
 CMD ["jupyter", "notebook", "--allow-root", "--ip=0.0.0.0", "--NotebookApp.iopub_data_rate_limit=10000000000", "--NotebookApp.token="]
