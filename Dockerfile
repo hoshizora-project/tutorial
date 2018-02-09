@@ -32,6 +32,8 @@ RUN set -eux && \
     git submodule update && \
     python setup.py install
 
+COPY data /root/sample
+
 ENV LD_LIBRARY_PATH /opt/conda/lib/python3.6/site-packages/amanogawa-0.0.1a0-py3.6-linux-x86_64.egg
 
 CMD ["jupyter", "notebook", "--allow-root", "--ip=0.0.0.0", "--NotebookApp.iopub_data_rate_limit=10000000000", "--NotebookApp.token="]

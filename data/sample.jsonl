@@ -1,0 +1,5 @@
+{"content": "Apple Strawberry Apple", "command": "foo"}
+{"content": "Apple Strawberry", "command": "foo"}
+{"content": "Apple Apple", "command": "bar"}
+{"content": "Banana Banana", "command": "foo bar"}
+{"content": "Pineapple Banana Banana", "command": "foo"}
