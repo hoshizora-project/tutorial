@@ -5,4 +5,4 @@
 docker run -p 8888:8888 -v `pwd`/data:/data hoshizora/tutorial
 ```
 
-And then open `http://localhost:8888` on browser and enjoy hoshizora-project!
+Open [http://localhost:8888](http://localhost:8888) on your browser and enjoy hoshizora project! Samples are available at `/root/sample`.
